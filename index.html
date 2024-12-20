@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-Recommendation-Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav style="background-color: rgb(154, 121, 71); padding: 10px; display: flex; align-items: center; justify-content: space-between;">
+        <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+          <li style="margin-right: 15px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+          <li style="margin-right: 15px;"><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
+          <li style="margin-right: 15px;"><a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a></li>
+        </ul>
+        <div style="display: flex;">
+            <input type="text" id="searchBar" placeholder="Search..." style="padding: 5px; margin-right: 5px; border-radius: 5px; border: 1px solid #ccc;">
+            <button onclick="searchFunction()" style="padding: 5px 10px; margin-right: 5px; border-radius: 5px; border: none; background-color: #555; color: white;">Search</button>
+            <button onclick="clearSearch()" style="padding: 5px 10px; border-radius: 5px; border: none; background-color: #999; color: white;">Clear</button>
+        </div>
+    </nav>
+      
+    <section id="introduction">
+        <h1 style="text-align:center">Welcome to Travel Explorer</h1>
+        <p style="font-size: larger;">Discover your ideal destinations based on your preferences. Let us guide you to your next unforgettable journey.</p>
+    </section>
+      
+    <section id="beaches">
+        <h2>Beach Recommendations</h2>
+        <div class="thumbnail">
+            <img src="marina.jpg" class="img-thumbnail" alt="marina" height="400px" width="700px">
+            <div class="caption">
+                <p>Marina Beach</p>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <img src="arombal.jpg" class="img-thumbnail" alt="arombal" height="400px" width="700px">
+            <div class="caption">
+                <p>Arombal Beach</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="temples">
+        <h2>Temple Recommendations</h2>
+        <div class="thumbnail">
+            <img src="tirumala.jpg" class="img-thumbnail" alt="tirumala" height="400px" width="700px">
+            <div class="caption">
+                <p>Tirumala</p>
+            </div>
+        </div>  
+        <div class="thumbnail">
+            <img src="shiridi.jpg" class="img-thumbnail" alt="shiridi" height="400px" width="700px">
+            <div class="caption">
+                <p>Shiridi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="countries">
+        <h2>Recommendations by Country</h2>
+        <div class="thumbnail">
+            <img src="taj.jpg" class="img-thumbnail" alt="india" height="400px" width="700px">
+            <div class="caption">
+                <p>India</p>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <img src="london.jpg" class="img-thumbnail" alt="london" height="400px" width="700px">
+            <div class="caption">
+                <p>London</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function searchFunction() {
+            const searchTerm = document.getElementById('searchBar').value;
+            alert('You searched for: ' + searchTerm);
+        }
+
+        function clearSearch() {
+            document.getElementById('searchBar').value = '';
+        }
+    </script>
+</body>
+</html>
